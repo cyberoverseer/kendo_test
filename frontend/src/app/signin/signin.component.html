@@ -1,23 +1,23 @@
 <div class="row">
     <div class="col s8 offset-s2">
-        <div class="signup-box">
+        <div class="signin-box">
             <div class="row k-ripple-container ng-star-inserted" kendoripplecontainer>
                 <div class="sm-jumbotron center-align">
                     <h2 class="padding-10">Login</h2>
                 </div>
-                <form class="k-form" #userRegistrationForm="ngForm">
+                <form class="k-form" #loginForm="ngForm" (ngSubmit)="OnSubmit(UserName.value,Password.value)">
                     <label class="k-form-field">
                         <span>Required field
                             <span class="k-required">*</span>
                         </span>
-                        <input class="k-textbox" placeholder="Username" name="UserName" #UserName="ngModel" [(ngModel)]="user.UserName" />
+                        <input class="k-textbox" placeholder="Username" name="UserName" #UserName ngModel />
                     </label>
 
                     <label class="k-form-field">
                         <span>Required field
                             <span class="k-required">*</span>
                         </span>
-                        <input class="k-textbox" placeholder="Password" name="Password" #Password="ngModel" [(ngModel)]="user.Password" />
+                        <input type="password" class="k-textbox" placeholder="Password" name="Password" #Password ngModel/>
                     </label>
                     <div class="row">
                         <div class="input-field col s12">
