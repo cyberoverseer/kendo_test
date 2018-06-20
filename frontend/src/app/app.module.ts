@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
 import { GridModule } from '@progress/kendo-angular-grid';
+import { ButtonsModule } from '@progress/kendo-angular-buttons';
+
 import { AppComponent } from './app.component';
 import { SignupComponent } from './signup/signup.component';
 
@@ -14,7 +17,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     GridModule,
-    FormsModule
+    FormsModule,
+    ButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
