@@ -1,4 +1,15 @@
+@import "~@progress/kendo-theme-default/scss/all";
 
+.padding-10{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+div.sm-jumbutron{
+    margin: 0px;
+    padding: 2rem;
+    background-color: #38547b;
+    color: #fff;
+}
 button.btn-submit{
     background-color: #38547b;
     color: #fff;
