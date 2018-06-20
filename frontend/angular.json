@@ -27,8 +27,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/@progress/kendo-theme-material/dist/all.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
