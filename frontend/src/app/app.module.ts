@@ -15,6 +15,8 @@ import { appRoutes } from './routes';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { ValueComponent } from './value/value.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -22,7 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppComponent,
     SignupComponent,
     SignInComponent
-  ],
+,
+    ValueComponent
+],
   imports: [
     BrowserModule,
     GridModule,
@@ -30,6 +34,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     ButtonsModule,
     InputsModule,
+    HttpModule,
     HttpClientModule,
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
