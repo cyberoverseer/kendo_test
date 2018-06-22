@@ -17,7 +17,7 @@ namespace backend.Data
 
             if (user == null)
                 return null;
-            if (password == user.Password)
+            if (password != user.Password)
                 return null;    
 
             return user;    
