@@ -13,6 +13,8 @@ import { SignupComponent } from './signup/signup.component';
 import { SignInComponent } from './signin/signin.component';
 import { appRoutes } from './routes';
 
+import { NavbarComponent } from './layout/navbar/navbar.component';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ValueComponent } from './value/value.component';
@@ -23,9 +25,9 @@ import { HttpModule } from '@angular/http';
   declarations: [
     AppComponent,
     SignupComponent,
-    SignInComponent
-,
-    ValueComponent
+    SignInComponent,
+    ValueComponent,
+    NavbarComponent
 ],
   imports: [
     BrowserModule,
