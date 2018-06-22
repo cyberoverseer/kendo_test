@@ -18,13 +18,18 @@ namespace backend.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody]UserForRegisterDto userForRegisterDto)
         {
-            //Validate Request
-
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
             userForRegisterDto.Password = userForRegisterDto.Password.ToLower();
 
             if(await _repo.UserExists(userForRegisterDto.Username))
-                return BadRequest("Username is already taken");
+                ModelState.AddModelError("Username", "Username already existes");
+
+
+            //Validate Request
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+
 
             var userToCreate = new User
             {
