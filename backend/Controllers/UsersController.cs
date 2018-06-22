@@ -8,16 +8,19 @@ using backend.Dtos;
 using backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
 
 namespace backend.Controllers
 {
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
+        private IConfiguration _configuration;
         private readonly IAuthRepository _repo;
-        public UsersController(IAuthRepository repo)
+        public UsersController(IAuthRepository repo, IConfiguration configuration)
         {
             _repo = repo;
+            _configuration = configuration;
         }
 
         [HttpPost("register")]
@@ -55,7 +58,7 @@ namespace backend.Controllers
 
             //Generate token
             var tokenHandler = new JwtSecurityTokenHandler();    
-            var key = Encoding.ASCII.GetBytes("super secret key");
+            var key = Encoding.ASCII.GetBytes(_configuration["AppSettings:Token"]);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(new Claim[]
