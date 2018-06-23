@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
 import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
     ValueComponent,
     NavbarComponent
 ,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
 ],
   imports: [
     BrowserModule,

@@ -1,4 +1,3 @@
-import { NavbarService } from './../shared/navbar.service';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../shared/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   isLoginError = false;
-  constructor(private userService: UserService, private router: Router, public nav: NavbarService) {
+  constructor(private userService: UserService, private router: Router) {
     document.body.style.verticalAlign = 'middle';
     document.body.style.display = 'table-cell';
     document.body.style.height = '100%';
