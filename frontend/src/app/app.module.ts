@@ -10,8 +10,8 @@ import { ButtonsModule } from '@progress/kendo-angular-buttons';
 import { InputsModule } from '@progress/kendo-angular-inputs';
 
 import { AppComponent } from './app.component';
-import { SignupComponent } from './signup/signup.component';
 import { SignInComponent } from './signin/signin.component';
+import { RegisterComponent } from './register/register.component';
 import { appRoutes } from './routes';
 
 import { NavbarComponent } from './layout/navbar/navbar.component';
@@ -22,14 +22,15 @@ import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
 import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    SignupComponent,
     SignInComponent,
+    RegisterComponent,
     ValueComponent,
     NavbarComponent
+,
+    RegisterComponent
 ],
   imports: [
     BrowserModule,
