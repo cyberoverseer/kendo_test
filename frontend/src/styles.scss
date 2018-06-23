@@ -1,48 +1,40 @@
 @import "~@progress/kendo-theme-material/scss/all";
 @import url(https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700);
 
-.padding-10{
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-div.sm-jumbutron{
-    margin: 0px;
-    padding: 2rem;
-    background-color: #38547b;
-    color: #fff;
-}
-button.btn-submit{
-    background-color: #38547b;
-    color: #fff;
-    width: 100%;
-}
-button.btn-submit:focus,button.btn-submit:hover{
-    background-color: #38547b;
-}
 
-input.ng-invalid.ng-dirty{
-    border-bottom-color : #e91e63 !important;
-    box-shadow: 0 1px 0 0 #e91e63 !important;
-}
+// Variables;
+@import "styles/theme-components/variables";
 
-div.error-message i{
-    vertical-align: middle !important;
-}
+// Components
+@import "styles/theme-components/global";
+@import "styles/theme-components/typography";
+@import "styles/theme-components/preloader";
+@import "styles/theme-components/header";
 
+@import "styles/theme-components/sidebar";
+@import "styles/theme-components/slideout";
 
-.tabs{
-    height: 65px;
-}
-.tabs .tab{
-    text-transform : none !important;
-    line-height: 65px;
-    height: 65px;
-}
-.tabs .tab a{
-    font-size: 25px;
-    color: grey !important;
-}
+@import "styles/theme-components/breadcrumb";
+@import "styles/theme-components/table";
+@import "styles/theme-components/card";
+@import "styles/theme-components/chart";
+@import "styles/theme-components/calendar";
 
-.tabs .tab a.active{
-    background-color: #fff !important;
-}
+// Miscellaneous
+@import "styles/theme-components/miscellaneous";
+
+// Pages
+@import "styles/theme-components/pages/icon";
+@import "styles/theme-components/pages/error";
+@import "styles/theme-components/pages/login";
+@import "styles/theme-components/pages/email";
+@import "styles/theme-components/pages/blog";
+@import "styles/theme-components/pages/invoice";
+@import "styles/theme-components/pages/product";
+@import "styles/theme-components/pages/gallary";
+@import "styles/theme-components/pages/map";
+@import "styles/theme-components/pages/plan";
+@import "styles/theme-components/pages/profile";
+
+// Footer
+@import "styles/theme-components/footer"; 

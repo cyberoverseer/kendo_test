@@ -1,3 +1,4 @@
+import { NavbarService } from './shared/navbar.service';
 import { UserService } from './shared/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
+import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
 
 
 @NgModule({
@@ -41,7 +43,7 @@ import { HttpModule } from '@angular/http';
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [UserService],
+  providers: [UserService, NavbarService, NavbarDeactivateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

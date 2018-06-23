@@ -1,3 +1,4 @@
+import { NavbarService } from './../shared/navbar.service';
 import { Component, OnInit } from '@angular/core';
 import { UserService } from './../shared/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
@@ -10,10 +11,12 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   isLoginError = false;
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router, public nav: NavbarService) { }
 
   ngOnInit() {
+
   }
+
 
   OnSubmit(userName, password) {
      this.userService.userAuthentication(userName, password).subscribe((data: any) => {
