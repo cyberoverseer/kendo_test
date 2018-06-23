@@ -2,22 +2,27 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
   <title>Frontend</title>
   <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
   <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+  <link href="assets/materialize.css" type="text/css" rel="stylesheet" media="screen,projection">
+ <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css"> -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <link href="assets/general-styles.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="assets/js/plugins/prism/prism.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="assets/js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href="assets/js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
 
 </head>
 
-<body>
+<body class="cyan">
   <div id="loader-wrapper">
     <div id="loader"></div>
     <div class="loader-section section-left"></div>
@@ -27,8 +32,8 @@
   <script type="text/javascript" src="assets/js/plugins/jquery-1.11.2.min.js"></script>    
   <!--materialize js-->
   <script type="text/javascript" src="assets/js/materialize.js"></script>
-  <!--prism
-  <script type="text/javascript" src="js/prism/prism.js"></script>-->
+
+  <script type="text/javascript" src="assets/js/plugins/prism/prism.js"></script>
   <!--scrollbar-->
   <script type="text/javascript" src="assets/js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
   <!-- chartist -->

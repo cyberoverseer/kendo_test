@@ -11,7 +11,15 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   isLoginError = false;
-  constructor(private userService: UserService, private router: Router, public nav: NavbarService) { }
+  constructor(private userService: UserService, private router: Router, public nav: NavbarService) {
+    document.body.style.verticalAlign = 'middle';
+    document.body.style.display = 'table-cell';
+    document.body.style.height = '100%';
+    document.documentElement.style.height = '100%';
+    document.documentElement.style.margin = 'auto';
+    document.documentElement.style.display = 'table';
+
+  }
 
   ngOnInit() {
 
