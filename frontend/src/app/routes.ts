@@ -10,4 +10,5 @@ export const appRoutes: Routes = [
     {path: 'login', component: SignInComponent},
     {path: 'home', component: HomeComponent},
     {path: 'value', component: ValueComponent},
+    { path: '**', redirectTo: 'login' }
 ];
