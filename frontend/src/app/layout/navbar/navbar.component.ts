@@ -18,6 +18,7 @@ export class NavbarComponent implements OnInit {
       this.path = this.location.path();
       if (this.path === '/login' ) { this.showNav = false; }
       if (this.path === '/register') { this.showNav = false; }
+      if (this.path === '/**') { this.showNav = false; }
       console.log(this.path);
    });
   }

@@ -21,6 +21,7 @@ import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { AuthGuard } from './_guard/auth.guard';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,10 @@ import { AboutComponent } from './about/about.component';
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    AuthGuard
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

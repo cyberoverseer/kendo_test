@@ -12,7 +12,7 @@
         <li>
           <a href="#">Values</a>
         </li>
-        <li>
+        <li *ngIf="!loggedIn()">
           <!-- Dropdown Trigger -->
           <a class='dropdown-button btn' href='javascript:void(0);' data-activates='menuDropdown' dropdown data-hover="false">
             Welcome
@@ -27,7 +27,7 @@
               <a href="javascript:void(0);">Change Password</a>
             </li>
             <li>
-              <a href="javascript:void(0);">Logout</a>
+              <a href="javascript:void(0);" (click)="logout()">Logout</a>
             </li>
           </ul>
         </li>
