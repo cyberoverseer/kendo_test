@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from './../shared/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
 
@@ -10,7 +9,9 @@ import { Router } from '@angular/router';
 })
 export class SignInComponent implements OnInit {
   isLoginError = false;
-  constructor(private userService: UserService, private router: Router) {
+  model: any = {};
+
+  constructor(private router: Router) {
     document.body.style.verticalAlign = 'middle';
     document.body.style.display = 'table-cell';
     document.body.style.height = '100%';
@@ -24,15 +25,8 @@ export class SignInComponent implements OnInit {
 
   }
 
-
-  OnSubmit(userName, password) {
-     this.userService.userAuthentication(userName, password).subscribe((data: any) => {
-      localStorage.setItem('userToken', data.access_token);
-      this.router.navigate(['/home']);
-    },
-    (err: HttpErrorResponse) => {
-      this.isLoginError = true;
-    });
+  login() {
+    console.log(this.model);
   }
 
 }

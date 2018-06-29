@@ -1,23 +1,23 @@
 <div id="login-page" class="row display-center">
     <div class="col s12 z-depth-4 card-panel">
-        <form class="login-form">
+        <form class="login-form" #loginForm = ngForm (ngSubmit)="login()">
             <div class="row">
                 <div class="input-field col s12 center">
                     <img src="/../../assets/images/login-logo.png" alt="" class="circle responsive-img valign profile-image-login">
-                    <p class="center login-form-text">Material Design Admin Template</p>
+                    <p class="center login-form-text">Materia Genesis</p>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="mdi-social-person-outline prefix"></i>
-                    <input id="username" type="text">
+                    <input id="username" type="text" #username="ngModel" required name="username" [(ngModel)]="model.username">
                     <label for="username" class="center-align">Username</label>
                 </div>
             </div>
             <div class="row margin">
                 <div class="input-field col s12">
                     <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="password" type="password">
+                    <input id="password" type="password" #password="ngModel" required name="password" [(ngModel)]="model.password">
                     <label for="password">Password</label>
                 </div>
             </div>
@@ -29,18 +29,18 @@
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <a href="index.html" class="btn waves-effect pink lighten-1 col s12">Login</a>
+                    <button [disabled]="!loginForm.valid" type="submit" class="btn waves-effect pink lighten-1 col s12">Login</button>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s6 m6 l6">
                     <p class="margin medium-small">
-                        <a href="page-register.html">Register Now!</a>
+                        <a href="/register">Register Now!</a>
                     </p>
                 </div>
                 <div class="input-field col s6 m6 l6">
                     <p class="margin right-align medium-small">
-                        <a href="page-forgot-password.html">Forgot password ?</a>
+                        <a href="#">Forgot password ?</a>
                     </p>
                 </div>
             </div>

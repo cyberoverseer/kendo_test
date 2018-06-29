@@ -1,5 +1,3 @@
-import { NavbarService } from './shared/navbar.service';
-import { UserService } from './shared/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ToastrModule } from 'ngx-toastr';
@@ -20,7 +18,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
-import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 
@@ -30,9 +27,8 @@ import { AboutComponent } from './about/about.component';
     SignInComponent,
     RegisterComponent,
     ValueComponent,
-    NavbarComponent
-,
-    RegisterComponent,
+    NavbarComponent,
+    RegisterComponent,
     HomeComponent,
     AboutComponent
 ],
@@ -48,7 +44,7 @@ import { AboutComponent } from './about/about.component';
     ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [UserService, NavbarService, NavbarDeactivateService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
