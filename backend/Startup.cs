@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AspNetCore.RouteAnalyzer;
 using backend.Data;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -44,6 +45,8 @@ namespace backend
                         ValidateAudience = false
                     };
                 });
+
+            services.AddRouteAnalyzer(); // Disable this in Production   
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +59,15 @@ namespace backend
 
             app.UseCors(x => x.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials());
             app.UseAuthentication();
-            app.UseMvc();
+            //app.UseMvc();
+
+            //Disable this in Production
+            app.UseMvc(routes =>
+            {
+                routes.MapRouteAnalyzer("/routes");
+            });
+
+            
         }
     }
 }

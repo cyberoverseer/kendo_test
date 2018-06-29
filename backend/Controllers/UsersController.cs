@@ -38,7 +38,8 @@ namespace backend.Controllers
 
             var userToCreate = new User
             {
-                Username = userForRegisterDto.Username
+                Username = userForRegisterDto.Username,
+                Password = userForRegisterDto.Password
             };
 
             var createdUser = await _repo.Register(userToCreate, userForRegisterDto.Password);

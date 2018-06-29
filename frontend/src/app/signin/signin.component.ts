@@ -1,3 +1,4 @@
+import { AuthService } from './../_services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -11,7 +12,7 @@ export class SignInComponent implements OnInit {
   isLoginError = false;
   model: any = {};
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private authService: AuthService) {
     document.body.style.verticalAlign = 'middle';
     document.body.style.display = 'table-cell';
     document.body.style.height = '100%';
@@ -26,7 +27,10 @@ export class SignInComponent implements OnInit {
   }
 
   login() {
-    console.log(this.model);
+    this.authService.login(this.model).subscribe(data => {
+      console.log('Logged in successfuly');
+    }, error => {
+      console.log('Logged in failed');
+    });
   }
-
 }
