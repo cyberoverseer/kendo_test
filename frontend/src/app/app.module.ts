@@ -22,6 +22,7 @@ import { ValueComponent } from './value/value.component';
 import { HttpModule } from '@angular/http';
 import { NavbarDeactivateService } from './shared/navbar-deactivate.service';
 import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent
 ,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent
 ],
   imports: [
     BrowserModule,
