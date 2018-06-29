@@ -27,7 +27,8 @@
               "src/assets",
               "src/assets/font",
               "src/assets/images",
-              "src/assets/js"
+              "src/assets/js",
+              "src/assets/font/roboto"
             ],
             "styles": [
               "src/styles.scss"
