@@ -46,6 +46,8 @@ export class SignInComponent implements OnInit, OnDestroy {
       this.router.navigate(['']);
     }, error => {
       console.log('Logged in failed');
+      this.model.username = '';
+      this.model.password = '';
     });
   }
 }
