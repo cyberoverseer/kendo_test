@@ -74,8 +74,9 @@ namespace backend.Controllers
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
+            var username = userForLoginDto.Username;
 
-            return Ok (new {tokenString});
+            return Ok (new {tokenString, username});
         }
 
     }

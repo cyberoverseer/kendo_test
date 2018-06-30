@@ -11,8 +11,10 @@ import { Location } from '@angular/common';
 export class NavbarComponent implements OnInit {
   path: any;
   showNav: boolean;
+  user: any;
 
   constructor( private router: Router, private location: Location, private authService: AuthService) {
+      this.user = localStorage.getItem('username');
       this.path = '';
       this.showNav = true;
       this.router.events.subscribe((val) => {

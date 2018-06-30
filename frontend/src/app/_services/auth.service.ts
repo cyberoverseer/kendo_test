@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 export class AuthService {
   baseUrl = 'http://localhost:5000/api/users';
   userToken: any;
+  userLogged: any;
 
 constructor( private http: Http, private router: Router) { }
 
@@ -18,7 +19,9 @@ login(model: any) {
     const user = response.json();
     if (user) {
       localStorage.setItem('token', user.tokenString);
+      localStorage.setItem('username', user.username);
       this.userToken = user.tokenString;
+      this.userLogged = user.username;
     }
   });
 }
