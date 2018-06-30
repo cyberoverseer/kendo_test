@@ -1,3 +1,4 @@
+import { AuthService } from './../../_services/auth.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
@@ -11,7 +12,7 @@ export class NavbarComponent implements OnInit {
   path: any;
   showNav: boolean;
 
-  constructor( private router: Router, private location: Location) {
+  constructor( private router: Router, private location: Location, private authService: AuthService) {
       this.path = '';
       this.showNav = true;
       this.router.events.subscribe((val) => {
@@ -24,5 +25,11 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  logout() {
+    this.authService.userToken = null;
+    localStorage.removeItem('token');
+    location.reload();
   }
 }

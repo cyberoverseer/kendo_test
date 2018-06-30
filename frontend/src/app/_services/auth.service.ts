@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
+import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 
@@ -8,7 +9,7 @@ export class AuthService {
   baseUrl = 'http://localhost:5000/api/users';
   userToken: any;
 
-constructor( private http: Http) { }
+constructor( private http: Http, private router: Router) { }
 
 login(model: any) {
   const headers = new Headers({'Content-type': 'application/json'});
@@ -20,6 +21,13 @@ login(model: any) {
       this.userToken = user.tokenString;
     }
   });
+}
+
+isLoggedIn() {
+  if (localStorage.getItem('token')) {
+    // logged in so return true
+    return true;
+}
 }
 
 }

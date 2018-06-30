@@ -1,8 +1,8 @@
 import { AuthService } from './_services/auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { ToastrModule } from 'ngx-toastr';
 import { RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { GridModule } from '@progress/kendo-angular-grid';
 import { ButtonsModule } from '@progress/kendo-angular-buttons';
@@ -36,6 +36,7 @@ import { AuthGuard } from './_guard/auth.guard';
 ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     GridModule,
     FormsModule,
     ReactiveFormsModule,
@@ -43,7 +44,6 @@ import { AuthGuard } from './_guard/auth.guard';
     InputsModule,
     HttpModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
