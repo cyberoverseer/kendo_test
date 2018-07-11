@@ -22,34 +22,38 @@ import { HttpModule } from '@angular/http';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AuthGuard } from './_guard/auth.guard';
+import { BlogComponent } from './blog/blog.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SignInComponent,
-    RegisterComponent,
-    ValueComponent,
-    NavbarComponent,
-    RegisterComponent,
-    HomeComponent,
-    AboutComponent
-],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    GridModule,
-    FormsModule,
-    ReactiveFormsModule,
-    ButtonsModule,
-    InputsModule,
-    HttpModule,
-    HttpClientModule,
-    RouterModule.forRoot(appRoutes)
-  ],
-  providers: [
-    AuthService,
-    AuthGuard
-  ],
-  bootstrap: [AppComponent]
-})
+   declarations: [
+      AppComponent,
+      SignInComponent,
+      RegisterComponent,
+      ValueComponent,
+      NavbarComponent,
+      RegisterComponent,
+      HomeComponent,
+      AboutComponent,
+      BlogComponent
+   ],
+   imports: [
+      BrowserModule,
+      BrowserAnimationsModule,
+      GridModule,
+      FormsModule,
+      ReactiveFormsModule,
+      ButtonsModule,
+      InputsModule,
+      HttpModule,
+      HttpClientModule,
+      RouterModule.forRoot(appRoutes)
+    ],
+
+    providers: [
+      AuthService,
+      AuthGuard
+    ],
+    bootstrap: [AppComponent]
+  })
+
 export class AppModule { }
